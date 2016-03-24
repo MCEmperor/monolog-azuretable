@@ -15,6 +15,6 @@
         "microsoft/windowsazure": "*"
     },
     "autoload": {
-        "psr-4": {"huhushow\\monolog-azuretable\\": "src/"}
+        "psr-4": {"Huhushow\\AzureTableStorageHandler\\": "src/"}
     }
 }
