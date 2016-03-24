@@ -4,7 +4,7 @@ monolog-azuretable
 Azure Table Storage Handler for Monolog, which allows to store log messages in a Azure Table Storage.
 
 # Installation
-monolog-mysql is available via composer. Just add the following line to your required section in composer.json and do a `php composer.phar update`.
+monolog-azuretable is available via composer. Just add the following line to your required section in composer.json and do a `php composer.phar update`.
 
 ```
 "huhushow/monolog-azuretable": ">1.0.0"
