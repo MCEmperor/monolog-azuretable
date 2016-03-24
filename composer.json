@@ -1,0 +1,20 @@
+{
+    "name": "huhushow/monolog-azuretable",
+    "description": "A handler for Monolog that sends messages to Azure Table Stotage",
+    "keywords": ["log", "logging", "monolog", "azure"],
+    "homepage": "https://github.com/huhushow/monolog-azuretable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hyungbum Park",
+            "email": "huhushow@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": ">1.14.0",
+        "microsoft/windowsazure": "*"
+    },
+    "autoload": {
+        "psr-4": {"huhushow\\monolog-azuretable\\": "src"}
+    }
+}
