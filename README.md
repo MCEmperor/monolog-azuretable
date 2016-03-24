@@ -25,7 +25,7 @@ Given that $client is your TableRestProxy instance, you could use the class as f
 //Import class
 use AzureTableStorageHandler\AzureTableStorageHandler;
 
-//Create MysqlHandler
+//Create AzureTableStorageHandler
 $AzureTableStorageHandler = new AzureTableStorageHandler($client, "log", \Monolog\Logger::DEBUG);
 
 //Create logger
