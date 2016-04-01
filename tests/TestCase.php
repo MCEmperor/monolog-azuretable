@@ -9,7 +9,7 @@ namespace Huhushow\AzureTableStorageHandler\Tests;
 
 use Monolog\Logger;
 
-class TestCase extends \PHPUnit_Framework_TestCase
+class TestCase extends PHPUnit_Framework_TestCase
 {
     /**
      * @return array Record
