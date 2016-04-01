@@ -6,7 +6,7 @@ use Exception;
 use PHPUnit_Framework_TestCase;
 use Huhushow\AzureTableStorageHandler\AzureTableStorageHandler;
 use Monolog\Logger;
-use Huhushow\AzureTableStorageHandler\Tests\TestCase;
+use Huhushow\AzureTableStorageHandler\Test\TestCase;
 
 class AzureTableStorageHandlerTest extends TestCase
 {
