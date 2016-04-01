@@ -1,6 +1,6 @@
 <?php
 
-namespace Huhushow\AzureTableStorageHandler\Tests;
+namespace Huhushow\AzureTableStorageHandler\Test;
 
 use Exception;
 use PHPUnit_Framework_TestCase;

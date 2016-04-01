@@ -5,7 +5,7 @@
  * 
  */
  
-namespace Huhushow\AzureTableStorageHandler\Tests;
+namespace Huhushow\AzureTableStorageHandler\Test;
 
 use Monolog\Logger;
 
