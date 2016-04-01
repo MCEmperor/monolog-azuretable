@@ -10,6 +10,12 @@
             "email": "huhushow@gmail.com"
         }
     ],
+		"repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ],
     "require": {
         "monolog/monolog": ">1.14.0",
         "microsoft/windowsazure": "0.4.*"
