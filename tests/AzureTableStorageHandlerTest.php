@@ -11,6 +11,7 @@ use Huhushow\AzureTableStorageHandler\Test\TestCase;
 class AzureTableStorageHandlerTest extends TestCase
 {
   private $client;
+  private $entity;
   
   public function setUp()
   {
@@ -19,8 +20,8 @@ class AzureTableStorageHandlerTest extends TestCase
     }
     
     $this->client = $this->getMockBuilder('WindowsAzure\Table\TableRestProxy')
-						->setMethods(array('createTable','__call'))
-						->disableOriginalConstructor()->getMock();
+      ->setMethods(array('createTable','insertOrReplaceEntity'))
+      ->disableOriginalConstructor()->getMock();
   }
 	
 	public function testConstruct()
@@ -41,29 +42,18 @@ class AzureTableStorageHandlerTest extends TestCase
 	
 	public function testHandle()
     {
-        $record = $this->getRecord();
-        $formatter = $this->getMock('Monolog\Formatter\FormatterInterface');
-        $formatted = array('foo' => 1, 'bar' => 2);
+        $msg = array(
+            'level' => Logger::ERROR,
+            'level_name' => 'ERROR',
+            'channel' => 'meh',
+            'context' => array('foo' => 7, 'bar', 'class' => new \stdClass),
+            'datetime' => new \DateTime("@0"),
+            'extra' => array(),
+            'message' => 'log',
+        );
         $handler = new AzureTableStorageHandler($this->client, 'foo');
-        $handler->setFormatter($formatter);
-        $formatter
-             ->expects($this->once())
-             ->method('format')
-             ->with($record)
-             ->will($this->returnValue($formatted));
-        $this->client
-             ->expects($this->once())
-             ->method('formatAttributes')
-             ->with($this->isType('array'))
-             ->will($this->returnValue($formatted));
-        $this->client
-             ->expects($this->once())
-             ->method('__call')
-             ->with('putItem', array(array(
-                 'TableName' => 'foo',
-                 'Item' => $formatted,
-             )));
-        $handler->handle($record);
+        
+        $handler->handle($msg);
     }
   
 }
