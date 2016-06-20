@@ -9,7 +9,7 @@ namespace Huhushow\AzureTableStorageHandler;
 
 use MicrosoftAzure\Storage\Table\TableRestProxy;
 use MicrosoftAzure\Storage\Table\Models\Entity;
-use WindowsAzure\Common\ServiceException;
+use MicrosoftAzure\Storage\Common\ServiceException;
 use MicrosoftAzure\Storage\Table\Models\EdmType;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Formatter\ScalarFormatter;
