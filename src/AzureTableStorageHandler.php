@@ -7,7 +7,7 @@
 
 namespace Huhushow\AzureTableStorageHandler;
 
-use WindowsAzure\Table\TableRestProxy;
+use WindowsAzure\Storage\Table\TableRestProxy;
 use WindowsAzure\Table\Models\Entity;
 use WindowsAzure\Common\ServiceException;
 use WindowsAzure\Table\Models\EdmType;
